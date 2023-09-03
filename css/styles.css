@@ -1,0 +1,70 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--font);
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+}
+
+.calculator {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, .75);
+}
+
+.calculator > button:hover {
+  background-color: rgba(255, 255, 255, .9);
+}
+
+.utility-button {
+  grid-column: span 2;
+}
+
+.screen {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, .75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10%;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+#lastScreen {
+  color: rgba(255, 255, 255, .75);
+  font-size: 1.5rem;
+}
+
+#currentScreen {
+  color: white;
+  font-size: 2.5rem;
+}
+
+
+.buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  align-items: center;
+  margin: 30%;
+  padding: 30%;
+  transform: scale(2.5);
+}
